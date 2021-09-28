@@ -1,5 +1,7 @@
 from turtle import Screen, Turtle
 
+length = 40
+
 def rectangle(t):
     t.forward(50)
     t.left(90)
@@ -9,16 +11,15 @@ def rectangle(t):
     for _ in range(2):
         t.forward(10)
         t.right(90)
-        t.forward(120)
+        t.forward(length)
         t.right(90)
 
     t.penup()
 
 def windmill(t):
-    for _ in range(4):
-        t.penup()
-        rectangle(t)
-        t.goto(0, 0)
+       t.penup()
+       rectangle(t)
+       t.goto(0, 0)
 
 screen = Screen()
 screen.tracer(0)
