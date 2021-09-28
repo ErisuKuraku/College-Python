@@ -1,6 +1,8 @@
 from turtle import Screen, Turtle
 
-length = 40
+file = open('length.txt', 'r')
+length = file.read()
+length = int(length)
 
 def rectangle(t):
     t.forward(50)
