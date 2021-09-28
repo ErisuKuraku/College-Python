@@ -1,8 +1,11 @@
 from turtle import Screen, Turtle
 
 file = open('length.txt', 'r')
-length = file.read()
-length = int(length)
+files = file.read()
+arr = files.split(", ")
+length = int(arr[0])
+width = int(arr[1])
+
 
 def rectangle(t):
     t.forward(50)
@@ -11,10 +14,10 @@ def rectangle(t):
     t.pendown()
 
     for _ in range(2):
-        t.forward(10)
-        t.right(90)
         t.forward(length)
-        t.right(90)
+        t.right(width)
+        t.forward(length)
+        t.right(width)
 
     t.penup()
 
