@@ -1,9 +1,11 @@
 
 from turtle import *
+import time
 
-planetOne=[1, 1, 10]
+planetOne=[1, 0, 55]
 planetTwo = [2, 0.5, 30]
-planets = [planetOne, planetTwo]
+planetThree = [3, 2, 25]
+planets = [planetOne, planetTwo, planetThree]
 distanceScale = 200
 
 
@@ -20,12 +22,18 @@ def drawplanet(t,p):
     t.penup()
     t.goto(0, 0)
 
+def planetloop():
+    direction=0
+    turtle.penup()
+    'to be finished'
+
 
 
 def draw():
     turtle.clear()
     for planet in planets:
         drawplanet(turtle, planet)
+
     screen.update()
     turtle.left(1)
     screen.ontimer(draw, 200)  
